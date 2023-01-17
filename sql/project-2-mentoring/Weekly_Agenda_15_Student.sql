@@ -14,14 +14,6 @@ SELECT *
 FROM v_avg_sales
 ORDER BY staff_id
 
---deneme
-SELECT staff_id, YEAR(order_date) year, AVG(list_price * quantity *(1-discount)) avg_sale
-FROM sale.order_item AS OI
-LEFT JOIN sale.orders AS O
-ON O.order_id = OI.order_id
-GROUP BY staff_id, YEAR(order_date)
-ORDER BY staff_id
-
 ----2. Select the annual amount of product produced according to brands (use window functions).
 --first looks
 SELECT *
