@@ -130,7 +130,6 @@ summary_regression AS (
     END as slope
   FROM summary_regression
 )
---SELECT * FROM regression ORDER BY product_id
 SELECT 
   product_id,
   CASE 
