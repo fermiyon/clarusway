@@ -89,7 +89,7 @@ SELECT
 FROM regression
 ORDER BY product_id
 
--- Second Solution with average
+-- Second Solution with average, if discount rate affect the quantity in an order
 
 ;WITH sales_data AS (
     SELECT 
