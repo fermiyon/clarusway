@@ -191,7 +191,7 @@ ORDER BY CAST(SUBSTRING(Cust_ID, PATINDEX('%[0-9]%', Cust_ID), LEN(Cust_ID)) AS 
 )
 -- Customers who Purchased Prod 11 and Prod 14, total quantity of Prod 11 and Prod 14
 , CTE6 AS (
-    SELECT Cust_ID, SUM(Order_Quantity) total_quantity_14_and_16
+    SELECT Cust_ID, SUM(Order_Quantity) total_quantity_14_and_11
     FROM sales
     WHERE Prod_ID = 'Prod_14' OR Prod_ID = 'Prod_11'
     GROUP BY Cust_ID
@@ -200,7 +200,7 @@ ORDER BY CAST(SUBSTRING(Cust_ID, PATINDEX('%[0-9]%', Cust_ID), LEN(Cust_ID)) AS 
 )
 -- ratio
 , CTE7 AS (
-    SELECT A.Cust_ID, CAST((total_quantity_14_and_16*1.0) / total_order_quantity AS DECIMAL(18,2)) ratio
+    SELECT A.Cust_ID, CAST((total_quantity_14_and_11*1.0) / total_order_quantity AS DECIMAL(18,2)) ratio
     FROM CTE6 A
     JOIN CTE5 B ON A.Cust_ID = B.Cust_ID
 )
