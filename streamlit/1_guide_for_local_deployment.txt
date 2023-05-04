@@ -1,0 +1,71 @@
+1. Create a folder on Desktop named "streamlit" and create a file named "my_app.py" inside it.
+
+	open conda terminal or command terminal and cd to this streamlit folder
+
+2. Create virtual environment
+
+ a. method 1: from anaconda promt
+
+   create env:
+   conda create -n env_name 
+   conda env list
+
+   activate env:
+   conda activate env_name
+   source activate env_name (mac users)
+   (or       activate env_name)
+   (conda deactivate  -> for windows users)
+   (source deactivate -> for mac users)
+       
+
+ b. method 2: from terminal (vscode, command promt, gitbash, mac terminal)
+
+   create env:
+   python -m venv env_name (windows)
+   python3 -m venv env_name (mac terminal)
+
+   activate env:
+   env_name/Scripts/activate (vscode)
+   source env_name/Scripts/activate (gitbash)
+   source env_name/bin/activate (mac terminal use "bin" instead of Scripts) 
+
+
+   (deactivate for vscode or gitbash)
+
+   (python.exe -m pip install --upgrade pip) if required
+
+
+  
+ c. method 3 : from anaconda
+
+   create environment (by mouse)
+   no activation required
+  
+
+3. add packages into venv
+
+  a. method 1: 
+
+   pip install streamlit==1.10.0
+   pip install scikit-learn==1.0.2
+
+or 
+ 
+   b. method 2:       
+   (if you already have requirement file)
+    ( I also did: python3 -m pip install --upgrade pip setuptools wheel)
+    pip install -r requirements.txt
+
+"""(pip list) to see the packages
+   (pip freeze > requirements.txt) to create requirement file""""
+   
+   
+  (python -V)
+  (streamlit version or pip list)
+
+4. streamlit run my_app.py
+
+
+
+
+
